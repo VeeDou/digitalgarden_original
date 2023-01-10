@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"///x/"}
+{"dg-publish":true,"permalink":"/文章/花花科普/x.颗粒度/"}
 ---
 
 #####  x.颗粒度
