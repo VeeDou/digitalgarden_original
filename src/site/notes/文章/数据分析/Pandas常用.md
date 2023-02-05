@@ -151,4 +151,6 @@ tmp=pd.melt(df,id_vars='姓名',var_name='科目',value_name='分数')
 ```
 ---
 创建时间:2023-02-05 22:56
-
+更多参考资料：
+1. [数据分析学习笔记 - 知乎 (zhihu.com)](https://www.zhihu.com/column/c_1102570753626591232)
+2. [ Python实现行转列？！超简单，赶快get起来_严小样儿的博客-CSDN博客](https://blog.csdn.net/Eric_data/article/details/104645738)
