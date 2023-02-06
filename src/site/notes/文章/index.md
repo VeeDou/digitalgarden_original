@@ -3,138 +3,129 @@
 ---
 
 
-这是我的数字花园主页！
-
-<!DOCTYPE html>
-
-<html lang="">
-
+<!doctype html>
+<html lang="zh" class="no-js">
 <head>
-
-<meta charset="UTF-8">
-
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>风也小窝 | 编程与学习 | 自律与生活</title>
-
-<meta name="keywords" content="风也小窝,风也的个人主页,编程与学习,自律与生活">
-
-<meta name="theme-color" content="#000">
-
-<link rel="shortcut icon" href="" type="image/x-icon">
-
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/kaygb/Apage@master/pws20200708/style.css">
-
-<style>
-
-h1::before{
-
-content: 'KAYGB\'S HOME';
-
-position: absolute;
-
-color: #b2bec348;
-
-z-index: -1;
-
-left: 10px;
-
-top: 10px;
-
-}
-
-</style>
-
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Vi</title>
+  <meta name="Description" content="Home Page of iissnan">
+  <meta name="color-scheme" content="dark light">
+  <script>(function(H){H.className=H.className.replace(/\bno-js\b/,'js')})(document.documentElement)</script>
+  <link rel="stylesheet" type="text/css" href="assets/css/main.css"/>
 </head>
 
 <body>
+  <div class="vi">
+    <h1 class="animate-slide-in-down">Vi</h1>
+    <div class="quote">
+      <span class="quote-line quote-line-start animate-slide-in-left"></span>
+      <span class="quote-icon quote-icon-start animate-slide-in-down">
+        <i class="icon icon-quotes-left"></i>
+      </span>
+      <p class="quote-content animate-slide-in-down">不积跬步，无以至千里。不积小流，无以成江海。</p>
+      <p class="quote-author animate-slide-in-down">《劝学篇》—— <em>荀子</em></p>
+      <span class="quote-icon quote-icon-end animate-slide-in-up">
+        <i class="icon icon-quotes-right"></i>
+      </span>
+      <span class="quote-line quote-line-end animate-slide-in-right"></span>
+    </div>
+    <div class="links">
+      <a href="https://github.com/iissnan" class="animate-slide-in-down">GitHub</a>
+      <a href="https://notes.iissnan.com" class="animate-slide-in-down">Notes</a>
+      <a href="https://douban.com/people/iissnan" class="animate-slide-in-down">DouBan</a>
+      <a href="https://weibo.com/iissnan" class="animate-slide-in-down">WeiBo</a>
+    </div>
+    <div class="location">
+      <span class="location-icon animate-slide-in-up">
+        <i class="icon icon-map-pin"></i>
+      </span>
+      <span class="location-text animate-slide-in-down">XiaMen - China</span>
+    </div>
+    <div class="relocating">
+      Navigating to: <span class="relocate-location"></span>...
+    </div>
+  </div>
 
-<div class="zz">
+  <script src="assets/vendors/jquery-3.3.1.min.js"></script>
+  <script>
+    $(function () {
+      var SLIDE_IN_DOWN = { opacity: 1, top: 0 };
+      var SLIDE_IN_UP = { opacity: 1, bottom: 0 };
+      var SLIDE_IN_LEFT = { left: 0 };
+      var SLIDE_IN_RIGHT = { right: 0 };
 
-<img class="lazy-img" data-original="https://i.loli.net/2020/09/14/v4Si8BIupOVcwm6.jpg" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAEALAAAAAABAAEAAAICRAEAOw==" alt="" srcset="">
+      registerCheatCode();
+      executeAnimations();
 
-</div>
+      function executeAnimations() {
+        $.when()
+          .then(animateTitle)
+          .then(animateQuote)
+          .then(animateLinks)
+          .then(animateLocation);
+      }
 
-<div class="main">
+      function animateTitle() {
+        return animate('h1', SLIDE_IN_DOWN);
+      }
 
-<div class="title">
+      function animateQuote() {
+        return $.when(
+          animate('.quote-line-start', SLIDE_IN_LEFT),
+          animate('.quote-line-end',SLIDE_IN_RIGHT),
+          animate('.quote-icon-start', SLIDE_IN_DOWN),
+          animate('.quote-icon-end', SLIDE_IN_UP)
+        )
+          .then(function () {
+            return animate('.quote-content', SLIDE_IN_DOWN);
+          })
+          .then(function () {
+            return animate('.quote-author', SLIDE_IN_DOWN);
+          });
+      }
 
-<h1>KAYGB'S HOME</h1>
+      function animateLinks() {
+        var DELAY_STEP = 200;
+        var elements = $('.links a');
+        var concurrent = $.makeArray(elements)
+          .map(function (element, index) {
+            return animate(element, SLIDE_IN_DOWN, index * DELAY_STEP);
+          });
 
-</div>
+        return $.when.apply($, concurrent);
+      }
 
-<div class="content">
+      function animateLocation() {
+        return $.when(
+          animate('.location-icon', SLIDE_IN_UP),
+          animate('.location-text', SLIDE_IN_DOWN)
+        );
+      }
 
-<p>LIFE IS A STORY.</p>
+      function animate(selector, properties, delay, options) {
+        delay = delay || 0;
+        return $(selector).delay(delay)
+          .animate(properties, options)
+          .promise();
+      }
 
-<p>So, enjoy life!</p>
+      function registerCheatCode() {
+        $(document.body).on('keydown', function (event) {
+          var KEY_B = 66;
 
-<p>Whatever you do, you hold on to that foolishly hopeful smile.</p>
+          if (event.which === KEY_B) {
+            $('.relocate-location').text('Bookmark Page');
+            $('.relocating').css('opacity', 1);
 
-<p>You can catch me on my <a href="https://blog.kaygb.com/" target="_blank">blog</a> or read my <a href="https://wiki.eas1.cn/" target="_blank">wiki</a>.</p>
-
-</div>
-
-<div class="footer">
-
-<span>&copy; 风也小窝</span>&nbsp;
-
-<span><a href="http://beian.miit.gov.cn" target="_blank" rel="nofollow">豫ICP备19002054号-6</a></span>&nbsp;
-
-<span>Design by : <a href="https://blog.kaygb.com/" target="_blank">kaygb</a></span>
-
-<br>
-
-<span><a class="upyun" href="https://console.upyun.com/register/?invite=r1FdZxBoH" target="_blank" rel="nofollow"><img src="https://i.loli.net/2020/09/14/YbXKvLAJhlWN1Ox.png" style="width:50px;"></a></span>
-
-</div>
-
-</div>
-
-<script src="https://cdn.staticfile.org/jquery/3.2.1/jquery.min.js"></script>
-
-<script src="https://cdn.staticfile.org/jquery_lazyload/1.9.7/jquery.lazyload.min.js"></script>
-
-<script>
-
-// lazyload
-
-window.onload = function() {
-
-$('.zz img').addClass('lazyload');
-
-$(function() {
-
-$("img.lazyload").lazyload({
-
-effect: 'fadeIn',
-
-// inverval: 3000
-
-effectspeed: 1000
-
-});
-
-});
-
-$(".zz img").lazyload({
-
-effect: 'fadeIn',
-
-// inverval: 3000
-
-effectspeed: 1000
-
-});
-
-}
-
-console.log(" %c bppws %c https://github.com/kaygb/Apage/ ", "color: #000; background: pink; padding:5px;", "background: #fff; padding:5px;");
-
-//初始化
-
-</script>
-
+            window.setTimeout(function () {
+              window.location.href = '/bookmarks.html';
+            }, 1000);
+          }
+        });
+      }
+    });
+  </script>
 </body>
-
 </html>
