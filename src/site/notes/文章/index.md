@@ -3,7 +3,7 @@
 ---
 
 
-<!doctype html>
+<!Doctype html>
 <html lang="zh" class="no-js">
 <head>
   <meta charset="utf-8">
@@ -32,16 +32,15 @@
       <span class="quote-line quote-line-end animate-slide-in-right"></span>
     </div>
     <div class="links">
-      <a href="https://github.com/iissnan" class="animate-slide-in-down">GitHub</a>
-      <a href="https://notes.iissnan.com" class="animate-slide-in-down">Notes</a>
-      <a href="https://douban.com/people/iissnan" class="animate-slide-in-down">DouBan</a>
-      <a href="https://weibo.com/iissnan" class="animate-slide-in-down">WeiBo</a>
+      <a href="https://www.zhihu.com/people/liuwei65/columns" class="animate-slide-in-down">知乎</a>
+      <a href="https://www.xiaohongshu.com/user/profile/5c31ff5b000000000700396b" class="animate-slide-in-down">小红书</a>
+      <a href="https://m.igetget.com/native/mine/account#/user/detail?enId=PW3zQ4ZopEvxZWvwkbeMNJmgVak96r" class="animate-slide-in-down">得到</a>
     </div>
     <div class="location">
       <span class="location-icon animate-slide-in-up">
         <i class="icon icon-map-pin"></i>
       </span>
-      <span class="location-text animate-slide-in-down">XiaMen - China</span>
+      <span class="location-text animate-slide-in-down">Shenzhen - Guangdong</span>
     </div>
     <div class="relocating">
       Navigating to: <span class="relocate-location"></span>...
