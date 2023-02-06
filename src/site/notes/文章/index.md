@@ -3,14 +3,6 @@
 ---
 
 
-这是我的数字花园主页！
-记录一些乱七八糟
-<!-- 
-Name：bppws
-Author：kaygb
-Version：20200708
--->
-<!DOCTYPE html>
 <html lang="">
 <head>
     <meta charset="UTF-8">
@@ -22,7 +14,7 @@ Version：20200708
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/kaygb/Apage@master/pws20200708/style.css">
     <style>
             h1::before{
-                content: 'KAYGB\'S HOME';
+                content: '相对静止的博客主页';
                 position: absolute;
                 color: #b2bec348;
                 z-index: -1;
@@ -45,7 +37,6 @@ Version：20200708
             <p>LIFE IS A STORY.</p>
             <p>So, enjoy life!</p>
             <p>Whatever you do, you hold on to that foolishly hopeful smile.</p>
-            <p>You can catch me on my <a href="https://blog.kaygb.com/" target="_blank">blog</a> or read my <a href="https://wiki.eas1.cn/" target="_blank">wiki</a>.</p>
         </div>
         <div class="footer">
             <span>&copy; 一泉温汤</span>&nbsp;
