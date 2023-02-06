@@ -2,7 +2,7 @@
 {"dg-publish":true,"permalink":"/文章/index/","tags":["gardenEntry"]}
 ---
 
-
+```html
 <html lang="">
 <head>
     <meta charset="UTF-8">
@@ -31,12 +31,12 @@
     <div class="main">
         
         <div class="title">
-            <h1>KAYGB'S HOME</h1>
+            <h1>相对静止的博客主页</h1>
         </div>
         <div class="content">
-            <p>LIFE IS A STORY.</p>
-            <p>So, enjoy life!</p>
-            <p>Whatever you do, you hold on to that foolishly hopeful smile.</p>
+            <p>生活就是一个故事.</p>
+            <p>所以,尽情去探索吧！</p>
+            <p>一切都会过去，但是来都来了，做点什么呗！</p>
         </div>
         <div class="footer">
             <span>&copy; 一泉温汤</span>&nbsp;
@@ -69,10 +69,11 @@
         });
     }
     console.log(" %c bppws %c https://github.com/kaygb/Apage/ ", "color: #000; background: pink; padding:5px;", "background: #fff; padding:5px;");
-//初始化
     </script>
 </body>
 </html>
+```
+
 
 <html lang="en">
 <head>
