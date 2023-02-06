@@ -3,7 +3,7 @@
 ---
 
 
-<!Doctype html>
+
 <html lang="zh" class="no-js">
 <head>
   <meta charset="utf-8">
@@ -17,7 +17,7 @@
 </head>
 
 <body>
-  <div class="vi">
+  <div class="vi"  >
     <h1 class="animate-slide-in-down">Vi</h1>
     <div class="quote">
       <span class="quote-line quote-line-start animate-slide-in-left"></span>
@@ -40,7 +40,7 @@
       <span class="location-icon animate-slide-in-up">
         <i class="icon icon-map-pin"></i>
       </span>
-      <span class="location-text animate-slide-in-down">Shenzhen - Guangdong</span>
+      <span class="location-text animate-slide-in-down">深圳 - 广东</span>
     </div>
     <div class="relocating">
       Navigating to: <span class="relocate-location"></span>...
